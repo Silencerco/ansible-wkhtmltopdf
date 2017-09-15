@@ -1,11 +1,11 @@
 # wkhtmltopdf
 
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/ansiblebit/wkhtmltopdf/master/LICENSE)
-[![Build Status](https://travis-ci.org/ansiblebit/wkhtmltopdf.svg?branch=master)](https://travis-ci.org/ansiblebit/wkhtmltopdf)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/Silencerco/ansible-wkhtmltopdf/master/LICENSE)
+[![Build Status](https://travis-ci.org/Silencerco/ansible-wkhtmltopdf.svg?branch=master)](https://travis-ci.org/Silencerco/ansible-wkhtmltopdf)
 
 [![Platform](http://img.shields.io/badge/platform-ubuntu-dd4814.svg?style=flat)](#)
 
-[![Project Stats](https://www.openhub.net/p/ansiblebit-wkhtmltopdf/widgets/project_thin_badge.gif)](https://www.openhub.net/p/ansiblebit-wkhtmltopdf/)
+[![Project Stats](https://www.openhub.net/p/Silencerco-ansible-wkhtmltopdf/widgets/project_thin_badge.gif)](https://www.openhub.net/p/Silencerco-ansible-wkhtmltopdf/)
 
 
 [Ansible][ansible] role to install [wkhtmltopdf].
@@ -69,7 +69,7 @@ Variables used in the `build` installation process.
 
 ## Dependencies
 
-- [ansiblebit/git] if you want to install using `wkhtmltopdf_installation=source` and `wkhtmltopdf_build=git`
+- [Silencerco.git] if you want to install using `wkhtmltopdf_installation=source` and `wkhtmltopdf_build=git`
 
 
 ## Playbooks
@@ -88,7 +88,7 @@ This option is only available for versions 0.12.1 and 0.12.2 on:
     wkhtmltopdf_version: 0.12.1
 
   roles:
-     - role: ansiblebit.wkhtmltopdf
+     - role: Silencerco.wkhtmltopdf
 ```
 
 
@@ -104,7 +104,7 @@ For `tarball`:
         wkhtmltopdf_installation: source
     
       roles:
-         - role: ansiblebit.wkhtmltopdf
+         - role: Silencerco.wkhtmltopdf
 
 For `git`:
 
@@ -116,8 +116,8 @@ For `git`:
         wkhtmltopdf_installation: source
     
       roles:
-        - role: ansiblebit.git
-        - role: ansiblebit.wkhtmltopdf
+        - role: Silencerco.git
+        - role: Silencerco.wkhtmltopdf
 
 
 ## Tags
@@ -170,6 +170,6 @@ $ vagrant ssh trusty64.vagrant.dev
 
 
 [ansible]:  https://ansible.com/    "Ansible"
-[ansiblebit/git]:  https://github.com/ansiblebit/git    "ansiblebit/git"
+[Silencerco.git]:  https://github.com/Silencerco/ansible-git    "Silencerco.git"
 [AerisCloud/ansible-wkhtmltopdf]: https://AerisCloud/ansible-wkhtmltopdf "AerisCloud/ansible-wkhtmltopdf"
 [wkhtmltopdf]: http://wkhtmltopdf.org/  "wkhtmltopdf"
