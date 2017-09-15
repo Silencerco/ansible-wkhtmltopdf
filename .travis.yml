@@ -14,6 +14,7 @@ matrix:
       env: TOXENV=py27-ansible20
 
 install:
+  - bash -c "cd .. && mv ansible-wkhtmltopdf wkhtmltopdf && ln -s wkhtmltopdf ansible-wkhtmltopdf"
   - pip install tox
 
 script:
@@ -28,8 +29,6 @@ notifications:
       - "'%{commit_subject}' by %{author}"
       - "%{elapsed_time} : %{duration}"
       - "%{message}"
-    rooms:
-      secure: BAUeKtpOtcYR6ERQDHXrbgOUWUubqFcyG6bs5zjzJ4RkFLNBnqCwESICepiYf6+/SJXzv7wJ7Zjc39bAmROFbmvHR+jSOaFmeoJ0mfez/ule9lo3Bq5usprwF2QV11XkNm7YSTQxKyQ+Vc4CTk1z8pGf9DCc6k0c/iC9tWSKwDY8K83uJXRgQjCs9QegNKOD26R4gtURrWcp3eC9dqEavc6lNzk/K4XSHZuvjigXafb1twP745cp6Ky0jNAhZNLe+WxOHZbXuZfOp8Cq6OCcOUcdD++lyvN1RcOtqaRynCvF1DRJzx96qI8wLQFxMgA6hVQ2y++1b+dPA0PxGRbOXPLiqpnMvdK+MoTVc8u+tkGwP8f7oa/UCjUTdDqR+a6VR0/mpUmrt+GEMvGcU7uCxXZtfM42L5soEZ/5r8byrfdsIg2bPQN1ozgZLNmr0b0gYPj0vJyVBFyIGpeoGvwKdjj76QOsdPOl/bCjLr8lTyjQEbN6UcKC1c+a3dFgukFFCZIPOnAw26JuOhCoA5LWWbMN9C89bIMPZDShkVtRVCs3a3wAG0jVh/ZznxJy/RaZvKcg6xT9dwwKjhUiai6S+UCr73JFGedWrgoxGS4aKfpRwnCCBF0r05VxZRRNzMRTK8fA9DJ2Tc+bZjL226jkn4HLd76f8xAJRCovApmCp30=
     on_success: always
     on_failure: always
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
